@@ -8,10 +8,10 @@ This project is a multi-modal classification model aimed at predicting product c
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
-- [Usage](#usage)
-  - [Local Development](#local-development)
-  - [Running with Docker](#running-with-docker)
-- [Demo](#Demo)
+- [Local Setup](#local-setup)
+- [System Design](#system-design)
+- [Running with Docker](#docker-deployment)
+- [Demo](#demo)
 
 ## Overview
 
@@ -35,7 +35,7 @@ The initial model achieves approximately 74% accuracy. This README outlines the 
 
 - **Dockerized Environment:** Complete Docker configuration for building and deploying the application.
 
-# Project Structure
+## Project Structure
 
 ```
 
@@ -70,7 +70,6 @@ The initial model achieves approximately 74% accuracy. This README outlines the 
 
 Key thing to note is the data directory is not pushed to git and mlflow runs are local, not cloud based.
 
-
 ## Installation
 
 ### Prerequisites
@@ -79,7 +78,7 @@ Key thing to note is the data directory is not pushed to git and mlflow runs are
 - uv and pip package manager
 - Docker (if deploying via Docker)
 
-### Local Setup
+# Local Setup
 
 This project uses uv as a package manager, read more about it here (https://github.com/astral-sh/uv)
 
@@ -90,7 +89,7 @@ git clone https://github.com/kameshkotwani/qogita.git
 cd qogita
 ```
 
-#### Docker Deployment
+# Docker Deployment
 
 ```bash
     # in the qogita directory, there is an app folder, switch to the directory
@@ -113,7 +112,11 @@ It accepts two features `name` and `brandName` in JSON format, and returns the p
 }
 ```
 
-## Demo
+# System Design
+
+![System Design Image](figures/system-design-product-classification.jpeg)
+
+# Demo
 
 This demo uses the FastAPI docs version to predict, which is deployed using Dockerfile and exposed at port 5000.
 
