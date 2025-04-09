@@ -11,6 +11,7 @@ This project is a multi-modal classification model aimed at predicting product c
 - [Usage](#usage)
   - [Local Development](#local-development)
   - [Running with Docker](#running-with-docker)
+- [Demo](#Demo)
 
 ## Overview
 
@@ -107,7 +108,14 @@ It accepts two features `name` and `brandName` in JSON format, and returns the p
 
 ```JSON
 {
-  'product':'string',
-  'prediction':'string'
+  "product":"string",
+  "prediction":"string"
 }
 ```
+
+## Demo
+
+This demo uses the FastAPI docs version to predict, which is deployed using Dockerfile and exposed at port 5000.
+
+![Demo of the Container](demo.gif)
+
