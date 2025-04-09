@@ -98,13 +98,22 @@ cd qogita
     docker build -t productsapi .
 
     # after the build is complete this command will expose the 5000 port to run the app
-    docker docker run -d -p 5000:5000 productsapi    
+    docker run -d -p 5000:5000 productsapi    
 ```
 
 After the deployment is complete, we can send a json request to (localhost:5000/classify) endpoint, using the curl, Postman or FASTAPI docs (localhost:5000/docs).
 
 It accepts two features `name` and `brandName` in JSON format, and returns the prediction in JSON format
 
+Input:
+```JSON
+{
+  "name":"string",
+  "brandName":"string"
+}
+```
+
+output response:
 ```JSON
 {
   "product":"string",
