@@ -22,4 +22,8 @@ dependencies = [
     "torch>=2.6.0",
     "torchvision>=0.21.0",
     "mlflow>=2.21.3",
+    "gensim>=4.3.3",
+    "spacy>=3.8.5",
+    "pip>=25.0.1",
+    "imbalanced-learn>=0.13.0",
 ]
